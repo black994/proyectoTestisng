@@ -3,7 +3,7 @@ import requests
 import json
 conn =sqlite3.connect('D:/jp949/Documents/Cali rec/proyecto/base_proy.s3db')
 #def LeerURL():
- #   url= "https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg?api_key=RGAPI-213fa414-3a82-43e0-90df-5d96c1d98233"
+ #   url= "https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg?api_key=RGAPI-2badf617-dd24-431e-9050-16eec33d171d"
   #  return  requests.get(url)
 
 def insertdata(p_championId,p_championLevel,p_championPoints,p_lastPlayTime,p_championPointsSinceLastLevel):
@@ -29,9 +29,10 @@ def insertdata(p_championId,p_championLevel,p_championPoints,p_lastPlayTime,p_ch
     conn.commit()
     conn.close()
 #url= "https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg/by-champion/19?api_key=RGAPI-213fa414-3a82-43e0-90df-5d96c1d98233"
-#url= "https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg?api_key=RGAPI-213fa414-3a82-43e0-90df-5d96c1d98233"
+#url= "https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg?api_key=RGAPI-2badf617-dd24-431e-9050-16eec33d171d"
 
-Respuesta = requests.get("https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg?api_key=RGAPI-213fa414-3a82-43e0-90df-5d96c1d98233")
+Respuesta = requests.get("https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg?api_key=RGAPI-2badf617-dd24-431e-9050-16eec33d171d")
+#Respuesta = requests.get(url)
 datos= Respuesta.json()
 #with open(datos):
 
@@ -41,4 +42,5 @@ for campeones in datos :
     print('champeonLevel', campeones['championLevel'])
         
     print('')
+
 
