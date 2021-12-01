@@ -4,8 +4,8 @@ from pyson import campeones
 
 
 #run test default
-#def test_campeon():
-#    assert campeones == 102
+def test_campeon():
+    assert campeones == 102
     
     
 def test_campeon():
