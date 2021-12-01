@@ -1,7 +1,7 @@
-import requests
-import openpyxl
 import sqlite3
-import json
+import requests
+#import json
+
 conn =sqlite3.connect('D:/jp949/Documents/Cali rec/proyecto/base_proy.s3db')
 def LeerURL():
     url= "https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg?api_key=RGAPI-213fa414-3a82-43e0-90df-5d96c1d98233"
