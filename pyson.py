@@ -29,9 +29,9 @@ def insertdata(p_championId,p_championLevel,p_championPoints,p_lastPlayTime,p_ch
     conn.commit()
     conn.close()
 #url= "https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg/by-champion/19?api_key=RGAPI-213fa414-3a82-43e0-90df-5d96c1d98233"
-url= "https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg?api_key=RGAPI-213fa414-3a82-43e0-90df-5d96c1d98233"
+#url= "https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg?api_key=RGAPI-213fa414-3a82-43e0-90df-5d96c1d98233"
 
-Respuesta = requests.get(url)
+Respuesta = requests.get("https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/6VwWJ3bgVMf3X7TqZgE0auUVOULT7ybPTUHPSZ0sNXvSShg?api_key=RGAPI-213fa414-3a82-43e0-90df-5d96c1d98233")
 datos= Respuesta.json()
 #with open(datos):
 
